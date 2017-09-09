@@ -5,7 +5,7 @@
 例如rtsp://172.20.25.3/user=admin&password=&channel=1&stream=0.sdp；   
 第二步：下载一个vlc的插件，可以去官网下载；下载完后，配置视频流的ip地址，就可以在vlc播放器中看到视频流了；   
 第三步：在html页面中放入以下代码，width和height比例为16:9的时候，全屏显示，否则上下或者左右会有黑色的边，目前谷歌浏览器不支持该插件了。   
-><object  
+<object  
   classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"   
   codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab"  
   id="vlc"  

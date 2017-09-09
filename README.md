@@ -5,23 +5,19 @@
 例如rtsp://172.20.25.3/user=admin&password=&channel=1&stream=0.sdp；   
 第二步：下载一个vlc的插件，可以去官网下载；下载完后，配置视频流的ip地址，就可以在vlc播放器中看到视频流了；   
 第三步：在html页面中放入以下代码，width和height比例为16:9的时候，全屏显示，否则上下或者左右会有黑色的边，目前谷歌浏览器不支持该插件了。   
-><OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" id="vlc"  
-    codebase="http://download.videolan.org/pub/videolan/vlc/0.8.6c/win32/axvlc.cab"  
-       width="600" height="480" id="vlc" events="True">  ---IE浏览器
- <param name="MRL" value="" />  
- <param name="Src" value="" />  
-   <param name="ShowDisplay" value="True" />  
- <param name="AutoLoop" value="False" />  
- <param name="AutoPlay" value="False" />  
- <param name="Time" value="True"/>  
- <EMBED pluginspage="http://www.videolan.org"       －－－火狐浏览器
-       type="application/x-vlc-plugin"  
-       version="VideoLAN.VLCPlugin.2"  
-       width="600"  
-       height="480"      
-       text="Waiting for video"  
-       name="vlc"  
-       ></EMBED>  
- </OBJECT>    
+><object  
+  classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"   
+  codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab"  
+  id="vlc"  
+  name="vlc"  
+  class="vlcPlayer"  
+  events="True">  
+    <param name="Src" value="rtsp://172.20.25.3/user=admin&password=&channel=1&stream=0.sdp；" />  
+    <param name="ShowDisplay" value="True" />  
+    <param name="AutoLoop" value="False" />  
+    <param name="AutoPlay" value="True" />  
+   <embed id="vlcEmb"  type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" width="640" height="480"  
+     target="rtsp://172.20.25.3/user=admin&password=&channel=1&stream=0.sdp；" ></embed>  
+</objetc>  
  
  
